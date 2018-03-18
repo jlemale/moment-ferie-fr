@@ -43,13 +43,20 @@
       return moment.fn.paques(Y).add(39, "days");
     };
 
-    moment.fn.pentecote = function (Y) {
+    moment.fn.lundiPentecote = function (Y) {
       if (Y === undefined) {
         Y = this.year();
       }
       return moment.fn.paques(Y).add(50, "days");
     };
 
+    moment.fn.vendrediSaint = function (Y) {
+      if (Y === undefined) {
+        Y = this.year();
+      }
+      return moment.fn.paques(Y).subtract(2, "days");
+    };
+    
     moment.fn.jourDeLAn = function (Y) {
       if (Y === undefined) {
         Y = this.year();
@@ -105,7 +112,14 @@
       }
       return moment("25-12-" + Y, "DD-MM-YYYY");
     };
-
+    
+    moment.fn.saintEtienne = function (Y) {
+      if (Y === undefined) {
+        Y = this.year();
+      }
+      return moment("26-12-" + Y, "DD-MM-YYYY");
+    };
+    
     var listeFerie = {
       "Jour de l'an": moment.fn.jourDeLAn,
       "Fête du travail": moment.fn.feteDuTravail,
@@ -115,10 +129,12 @@
       "Toussaint": moment.fn.toussaint,
       "Armistice": moment.fn.armistice,
       "Noël": moment.fn.noel,
-      "Pâques": moment.fn.paques,
+//       "Pâques": moment.fn.paques,
       "Lundi de Pâques": moment.fn.lundiDePaques,
       "Ascension": moment.fn.ascension,
-      "Pentecôte": moment.fn.pentecote
+      "Lundi de Pentecôte": moment.fn.lundiPentecote,
+      "Saint Etienne": moment.fn.saintEtienne,
+      "Vendredi Saint": moment.fn.vendrediSaint
     };
 
     moment.fn.getFerieList = function (Y) {
