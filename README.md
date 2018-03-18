@@ -1,7 +1,7 @@
 Moment-ferie-fr  [![Build Status](https://travis-ci.org/DepthFrance/moment-ferie-fr.svg?branch=master)](https://travis-ci.org/DepthFrance/moment-ferie-fr)
 ==================================================
 
-Plug-in [Moment.js][1] jours feriés en France
+Plug-in [Moment.js][1] jours feriés en Moselle (France)
 
 
 exemple utilisation:
@@ -20,11 +20,10 @@ exemple utilisation:
 
     /*
     idem pour:
-
-      day.paques();
+      day.vendrediSaint();
       day.lundiDePaques();
       day.ascension();
-      day.pentecote();
+      day.lundiPentecote();
 
       day.jourDeLAn();
       day.feteDuTravail();
@@ -34,6 +33,7 @@ exemple utilisation:
       day.toussaint();
       day.armistice();
       day.noel();
+      day.saintEtienne();
     */
 
 
